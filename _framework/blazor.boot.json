@@ -1,7 +1,7 @@
 {
-  "mainAssemblyName": "BlazorWatch",
+  "mainAssemblyName": "ANTBlazor",
   "resources": {
-    "hash": "sha256-Q+whiaVBk0+F6+lqyXQY0VimyfG5FIoVQxIgx9uCBqM=",
+    "hash": "sha256-HzMo6DQp1pCwrh/ObEYRm7YLG8VImHzlSG0MBm3zNdE=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,9 +17,9 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
+      "ANTBlazor.wasm": "sha256-f7IbhG8quAXeMDOCdGqfN3v6W29Yq1SANJoUo0ntU9E=",
       "AntDesign.Charts.wasm": "sha256-YeCQmjKJcBv03MQdn/KGwgUG3LZZKoZ9HY8RKf2E8Ic=",
       "AntDesign.wasm": "sha256-oaHhbNKk47JAztFpvOBhvnPGZob+hif/9S9aPUnOb9E=",
-      "BlazorWatch.wasm": "sha256-FrD/NABcNlhIB0G9WjxBZGHgecX6n67Jm3W5iqHOd6o=",
       "Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm": "sha256-Mpd98aRLb9cK/TLwAqYub55BwBvzDAyJs18h1O7jIqk=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-r3aXyieEKp1j8romwP4AiIcuQvxmZTMTjlAN9boYYUI=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-4Zqd0fTDKjYFqAKx+A9dNoi1VS1PcM29+ZYjjZdlFlA=",
