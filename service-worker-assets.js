@@ -37,7 +37,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-gdAMyqhPkjjlPWupvIKPUAP8dKD+TMPsPgv43SiNT0s=",
+      "hash": "sha256-SLJDPYAh6y1RgP4DYgA8UmY2XdY0GNYZ77IjGAe50Mc=",
       "url": "index.html"
     },
     {
@@ -81,11 +81,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-EPX4PR41ivkImCnGdUFyUbm1aHth8eHLxQ9VC7gnSms=",
+      "hash": "sha256-JM1l6yzyNnlaclIMVYvAtHqdfeZPXNQEyxbc2LSlg1M=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-f7IbhG8quAXeMDOCdGqfN3v6W29Yq1SANJoUo0ntU9E=",
+      "hash": "sha256-Mv8iQ0hWbau+t+dKuiiJ7SgWyTdiCQ16iLm3fC19YLo=",
       "url": "_framework\/ANTBlazor.wasm"
     },
     {
@@ -1777,5 +1777,5 @@
       "url": "_content\/AntDesign\/less\/upload\/style\/rtl.less"
     }
   ],
-  "version": "wI0nHG10"
+  "version": "WQGC1cqa"
 };
