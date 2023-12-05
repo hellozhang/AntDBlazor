@@ -34,8 +34,8 @@ jobs:
                   npm install
                   echo "/* updated `date "+%Y-%m-%d %H:%M:%S"` */" >> ./wwwroot/service-worker.published.js
                   cp -rf .github/deploy/gh-pages/* .github/deploy/gh-pages/.nojekyll .github/deploy/gh-pages/.spa .//wwwroot
-                  dotnet build ./BlazorWatch.sln
-                  dotnet publish ./BlazorWatch.csproj -c Release -o cargo
+                  dotnet build ./antdblazor.sln
+                  dotnet publish ./antdblazor.csproj -c Release -o cargo
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@releases/v3
