@@ -1,6 +1,6 @@
 {
-  "name": "BlazorWatch",
-  "short_name": "BlazorWatch",
+  "name": "ANTBlazor",
+  "short_name": "ANTBlazor",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
