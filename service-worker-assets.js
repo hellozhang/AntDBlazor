@@ -81,11 +81,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-tfgUc+1DPpLH5aATUT7NQOaFnnO+k9cdSxDy7ym8f6Q=",
+      "hash": "sha256-6AbjbwcX6MwssE2luLOxuZsQQEC+ZwEWUxp9O0lVJB4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-rTrYFYWAZvV6PcsoaFkSwze3dM+dZBcwtLO98zsvkm4=",
+      "hash": "sha256-gx+6nKFHZmrUitelgQkq51TR5uJhIYB7Fz7YgO3SXck=",
       "url": "_framework\/ANTBlazor.wasm"
     },
     {
@@ -2025,5 +2025,5 @@
       "url": "_content\/AntDesign\/less\/upload\/style\/rtl.less"
     }
   ],
-  "version": "TTY74Nk1"
+  "version": "zJVdK2T+"
 };
