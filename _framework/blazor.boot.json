@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ANTBlazor",
   "resources": {
-    "hash": "sha256-ks6EsWg6OvgyY129R9BOr0JLOWsb4nnIMTHwkKPTj7g=",
+    "hash": "sha256-3Ktyx7hmnj1gyL0LUolC1VrD3ZzEpZG7gW8+vIAbuoU=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "ANTBlazor.wasm": "sha256-9HyKwXE0HfNZaBcalFvfObBK4Jb1cmXltb7Ya5vcfDc=",
+      "ANTBlazor.wasm": "sha256-rTrYFYWAZvV6PcsoaFkSwze3dM+dZBcwtLO98zsvkm4=",
       "AntDesign.Charts.wasm": "sha256-YeCQmjKJcBv03MQdn/KGwgUG3LZZKoZ9HY8RKf2E8Ic=",
       "AntDesign.ProLayout.wasm": "sha256-BlejVAClsvHPL2DPZCxLjdvTp0HiIJSYmhL925ywRg8=",
       "AntDesign.wasm": "sha256-oaHhbNKk47JAztFpvOBhvnPGZob+hif/9S9aPUnOb9E=",
@@ -32,7 +32,7 @@
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-r3aXyieEKp1j8romwP4AiIcuQvxmZTMTjlAN9boYYUI=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-FM0lgetNnRVurlKEynI/SbnFkU8hJs3Rl4N++1iTLTc=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-ceTSre0Yah6d+iQ6OdJyUPVNZnwBrgJJBkstHg62Q/I=",
-      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-XC+FOdNt7HlKOKzBkO52FdUVV3/JWtlC1Ot7PqjsHso=",
+      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-enPwGlUgYKVeKpht5QtskoaDUOgb53oW9Tu4PO38ZAM=",
       "Microsoft.CSharp.wasm": "sha256-gYOAIn43uyv6OzB4Ej97weX1Urg9ODuWSGzvD7gx2M8=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-P/xpjEXA5v7pW7PKj+UZy1oclEg8BhdY8CZu6g+TkK8=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-rln9qqYVlQgAeefIfX3SS2X3dz84YxLU/DCntgBISTg=",

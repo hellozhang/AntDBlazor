@@ -81,11 +81,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-9gKMdwHsSdp+b1u1X58Xl2uHvex8XsilseR4Yqv2WQo=",
+      "hash": "sha256-tfgUc+1DPpLH5aATUT7NQOaFnnO+k9cdSxDy7ym8f6Q=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-9HyKwXE0HfNZaBcalFvfObBK4Jb1cmXltb7Ya5vcfDc=",
+      "hash": "sha256-rTrYFYWAZvV6PcsoaFkSwze3dM+dZBcwtLO98zsvkm4=",
       "url": "_framework\/ANTBlazor.wasm"
     },
     {
@@ -145,7 +145,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
-      "hash": "sha256-XC+FOdNt7HlKOKzBkO52FdUVV3\/JWtlC1Ot7PqjsHso=",
+      "hash": "sha256-enPwGlUgYKVeKpht5QtskoaDUOgb53oW9Tu4PO38ZAM=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.wasm"
     },
     {
@@ -2025,5 +2025,5 @@
       "url": "_content\/AntDesign\/less\/upload\/style\/rtl.less"
     }
   ],
-  "version": "oEannqKC"
+  "version": "TTY74Nk1"
 };
