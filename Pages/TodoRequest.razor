@@ -1,0 +1,53 @@
+﻿@page "/todorequest"
+@using System.Net.Http.Headers
+@using EasyNotice.Dingtalk
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
+
+<h1>ToDo Request</h1>
+
+<button @onclick="PostRequest">Submit POST request</button>
+
+<p>Response body returned by the server:</p>
+
+<p>@responseBody</p>
+
+@code {
+    private string? responseBody;
+
+    private async Task PostRequest()
+    {
+        string webHook = "https://oapi.dingtalk.com/robot/send?access_token=dd9371044f8fa37f87d0e2d6aa7779e9e0fe5726fa37d512d07c153829a526ab";
+        string Secret = "SEC85ac2fe0afe69b9d7b74ab53e9858521247477bfa564668a98eac07ae4d5344e";
+        var requestUrl = DingTalkHelper.GetRequestUrl(webHook, Secret);
+        var message = new
+        {
+            msgtype = "markdown",
+            markdown = new
+            {
+                title = "这个是设置的关键词",
+                text = $"新订单：有新订单，请及时处理"
+            }
+        };
+        var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("POST"),
+                RequestUri = new Uri(requestUrl),
+                Content =
+                        JsonContent.Create(message)
+            };
+
+            var response = await Http.SendAsync(requestMessage);
+            var responseStatusCode = response.StatusCode;
+
+            responseBody = await response.Content.ReadAsStringAsync();
+        
+    }
+
+    public class TodoItem
+    {
+        public long Id { get; set; }
+        public string? Name { get; set; }
+        public bool IsComplete { get; set; }
+    }
+}
