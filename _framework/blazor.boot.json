@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ANTBlazor",
   "resources": {
-    "hash": "sha256-+VIi9OSdOGpB8Ial0Bmm7HgzPJo5ytKd9HpgKpjqMMM=",
+    "hash": "sha256-4wfjrwY+cfzDyy1PQDITzfRLFt1I0HxGrWCYSsOPLdI=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "ANTBlazor.wasm": "sha256-olwWUaQao1XCKUs53OFNPanADLwwlJ1vAxCqTHHY7NY=",
+      "ANTBlazor.wasm": "sha256-WdqFdRt/D8smwFTQiCgyRLekZX5Oz7DN7EWnxxJNcHk=",
       "AntDesign.Charts.wasm": "sha256-YeCQmjKJcBv03MQdn/KGwgUG3LZZKoZ9HY8RKf2E8Ic=",
       "AntDesign.ProLayout.wasm": "sha256-BlejVAClsvHPL2DPZCxLjdvTp0HiIJSYmhL925ywRg8=",
       "AntDesign.wasm": "sha256-oaHhbNKk47JAztFpvOBhvnPGZob+hif/9S9aPUnOb9E=",
@@ -28,11 +28,12 @@
       "Flurl.Http.wasm": "sha256-BdnUFubm9mKgDFZLyN7XS4kwlgZj9r47cwrSMb0jsXU=",
       "Flurl.wasm": "sha256-AN4vKpqD2kqpOro/5zdzrt6PRKmob4cjW7pzkQ+XnSE=",
       "MailKit.wasm": "sha256-7MkvoiXpCwvjwjOnwtRuhpJLy7mtDIrB0Og+H9HhZ3k=",
+      "Microsoft.AspNetCore.Authorization.wasm": "sha256-NX0yMr0tMOE7PFWu/vhXijIxHWfjPGa0hhjl6aLs8xQ=",
       "Microsoft.AspNetCore.Components.DataAnnotations.Validation.wasm": "sha256-Mpd98aRLb9cK/TLwAqYub55BwBvzDAyJs18h1O7jIqk=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-r3aXyieEKp1j8romwP4AiIcuQvxmZTMTjlAN9boYYUI=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-FM0lgetNnRVurlKEynI/SbnFkU8hJs3Rl4N++1iTLTc=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-ceTSre0Yah6d+iQ6OdJyUPVNZnwBrgJJBkstHg62Q/I=",
-      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-enPwGlUgYKVeKpht5QtskoaDUOgb53oW9Tu4PO38ZAM=",
+      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-XC+FOdNt7HlKOKzBkO52FdUVV3/JWtlC1Ot7PqjsHso=",
       "Microsoft.CSharp.wasm": "sha256-gYOAIn43uyv6OzB4Ej97weX1Urg9ODuWSGzvD7gx2M8=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-P/xpjEXA5v7pW7PKj+UZy1oclEg8BhdY8CZu6g+TkK8=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-rln9qqYVlQgAeefIfX3SS2X3dz84YxLU/DCntgBISTg=",
@@ -75,7 +76,7 @@
       "System.Linq.wasm": "sha256-EDk7UJVLt0GNqnhRfRavSxNCp6Mt5VaYpVnty0wQXcY=",
       "System.Memory.wasm": "sha256-n1jQK2YClIDJ4Zyz4Ml/pPp+l9Fqz9sdjT4ZTrE1atM=",
       "System.Net.Http.Json.wasm": "sha256-kMrasf748TjOOOyHWeJGspofF7bTgKuP7fD7FsTaagI=",
-      "System.Net.Http.wasm": "sha256-gPxwRM/U3SA+R+uFp5P9PwkUoOJ9UeJUclzBdtiXprA=",
+      "System.Net.Http.wasm": "sha256-fFTlR7V2mVegTYws9g8Hzoi0gDggiy7QmvMeV0+M18A=",
       "System.Net.Mail.wasm": "sha256-13dyND5c9r+wGaYTsC2QSxIasysanYDeugX/pxuif7o=",
       "System.Net.NameResolution.wasm": "sha256-70/r39lqOKTA06KYCDE8X5YoHoaI/Y0J2qMCcTUZXp0=",
       "System.Net.NetworkInformation.wasm": "sha256-80UXLEDows1y+HC699i35L89l8VtJkRBX7+FRuYpAPE=",
@@ -121,6 +122,9 @@
   "cacheBootResources": true,
   "debugLevel": 0,
   "linkerEnabled": true,
+  "appsettings": [
+    "../appsettings.json"
+  ],
   "globalizationMode": "sharded",
   "extensions": {
     "blazor": {}
