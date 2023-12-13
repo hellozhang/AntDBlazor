@@ -36,7 +36,7 @@
                 Content =
                         JsonContent.Create(message)
             };
-
+          requestMessage.SetBrowserRequestMode(BrowserRequestMode.NoCors);
             var response = await Http.SendAsync(requestMessage);
             var responseStatusCode = response.StatusCode;
 

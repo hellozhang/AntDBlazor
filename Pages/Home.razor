@@ -3,54 +3,142 @@
 @using System.Text
 @using AntDesign
 @using EasyNotice.Dingtalk
+@using Flurl.Http
+@using MimeKit
+@using MailKit.Net.Smtp
+@inject IChartService chatService
 @inject HttpClient http
-
 @* <div class="card text-center m-3">
     <h5 class="card-header">POST request with headers set</h5>
     <div class="card-body">
         Returned Id: @article?.Id
     </div>
 </div> *@
-<Alert Type="@AlertType.Success" Message="Success Text" />
-
 @code {
-
-
     protected override async Task OnInitializedAsync()
     {
 
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://jsonplaceholder.typicode.com/posts");
-        var message = new
+
+        var row = new
         {
-            userId = 1,
-            id = 1,
-            title = "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-            body = "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            records = new[]
+                     {
+                    new {
+                     fields= new
+                     {
+                          Name= "QWE33",
+                          Code="10902",
+                          StartDate="2023-11-02",
+                          StartValue= 1.09,
+                          CurrentValue=1.2
+                      }
+                    }
+                },
+            fieldKey = "name"
         };
-        var postBody = new { Title = "Blazor POST Request Example" };
-        request.Content = new StringContent(JsonSerializer.Serialize(message), Encoding.UTF8, "application/json");
-        using var response = await http.SendAsync(request);
-   
+        string requestUrl = "https://api.vika.cn/fusion/v1/datasheets/dst1CSXS5xqdZJHTLZ/records?viewId=viweVLj1Hwwqs&fieldKey=name";
+        var res = await requestUrl
+            .WithHeader("Authorization", "Bearer uskKX37HkZuodf8VkY7CiQ1")
+            .WithHeader("Accept", "application/json")
+            .PostJsonAsync(row);
+        var s = res.GetStringAsync();
 
 
 
 
 
-        var message2 = new
-        {
-            msgtype = "markdown",
-            markdown = new
-            {
-                title = "这个是设置的关键词",
-                text = $"新订单：有新订单，请及时处理"
-            }
-        };
-        string webHook = "https://oapi.dingtalk.com/robot/send?access_token=dd9371044f8fa37f87d0e2d6aa7779e9e0fe5726fa37d512d07c153829a526ab";
-        string Secret = "SEC85ac2fe0afe69b9d7b74ab53e9858521247477bfa564668a98eac07ae4d5344e";
-        var requestUrl = DingTalkHelper.GetRequestUrl(webHook, Secret);
 
-        var request2 = new HttpRequestMessage(HttpMethod.Post, requestUrl);
-        request2.Content = new StringContent(JsonSerializer.Serialize(message2), Encoding.UTF8, "application/json");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        // //     var reest = new CustomBotRequest
+        // //         {
+        // //             AccessToken = "dd9371044f8fa37f87d0e2d6aa7779e9e0fe5726fa37d512d07c153829a526ab",
+        // //             Secret = "SEC85ac2fe0afe69b9d7b74ab53e9858521247477bfa564668a98eac07ae4d5344e",     //加签密钥，可选
+        // //             IsAtAll = false,        //是否@所有人，默认false
+        // //             UserMobiles = new List<long>
+        // // {
+        // //   18817669658
+        // // }
+        // //         };
+        // //     var client = new CustomBotClient(reest);
+
+        // //     await client.SendText("江西致20死19伤车祸调查报告公布");
+
+
+
+
+
+
+
+
+
+        // var request = new HttpRequestMessage(HttpMethod.Post, "https://jsonplaceholder.typicode.com/posts");
+
+        // var message = new
+        // {
+        //     userId = 1,
+        //     id = 1,
+        //     title = "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+        //     body = "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        // };
+        // var postBody = new { Title = "Blazor POST Request Example" };
+        // request.Content = new StringContent(JsonSerializer.Serialize(message), Encoding.UTF8, "application/json");
+        // using var response = await http.SendAsync(request);
+
+
+
+
+
+
+        // var message = new
+        // {
+        //     msgtype = "markdown",
+        //     markdown = new
+        //     {
+        //         title = "这个是设置的关键词@小艾",
+        //         text = $"新订单：有新订单，请及时处理@小艾"
+        //     }
+        // };
+        // string webHook = "https://oapi.dingtalk.com/robot/send?access_token=dd9371044f8fa37f87d0e2d6aa7779e9e0fe5726fa37d512d07c153829a526ab";
+        // string Secret = "SEC85ac2fe0afe69b9d7b74ab53e9858521247477bfa564668a98eac07ae4d5344e";
+        // var requestUrl = DingTalkHelper.GetRequestUrl(webHook, Secret);
+        // requestUrl = "https://oapi.dingtalk.com/robot/send?access_token=460b8ad50c7b289cb681106f346250838112ad836beddcd97614d505929d95a7";
+        // var requestMessage = new HttpRequestMessage()
+        //     {
+        //         Method = new HttpMethod("POST"),
+        //         RequestUri = new Uri(requestUrl),
+        //         Content = JsonContent.Create(message)
+        //     };
+
+        // var response2 = await http.SendAsync(requestMessage);
+        // Console.WriteLine(response2.Content);
+        // Console.WriteLine(response2.ReasonPhrase);
+
+
+        // http.DefaultRequestHeaders.TryAddWithoutValidation("ContentType", "text/html;charset=UTF-8");
+        //   http.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+        //   http.DefaultRequestHeaders.TryAddWithoutValidation("UserAgent", "Mozilla/5.0 (Windows NT 5.2; rv:12.0) Gecko/20100101 Firefox/12.0");
+
+
+
+
+        // request2.Content = new StringContent(JsonSerializer.Serialize(message2), Encoding.UTF8, "application/json");
 
         // request.Headers.Add("Host", "oapi.dingtalk.com");
         // request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.160 Safari/537.36");
@@ -59,10 +147,9 @@
         // request.Headers.Add("Origin", "oapi.dingtalk.com");
         // request.Headers.Add("Referer", "oapi.dingtalk.com");
         // request.Headers.Add("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS");
-        request.Headers.Add("Access-Control-Allow-Origin", "*");
+        // request.Headers.Add("Access-Control-Allow-Origin", "*");
         // request.Headers.Add("Access-Control-Allow-Headers", "Origin,Content-Length,Content-Type,Authorization");
-        using var response2 = await http.SendAsync(request2);
-     
+
 
 
     }
