@@ -1,0 +1,45 @@
+﻿name: Publish Docs
+
+env:
+    Version: 0.1.0
+
+
+on:
+    push:
+        branches:
+            - dev
+
+jobs:
+    publish-and-deploy:
+        runs-on: ubuntu-latest
+        if: github.repository_owner == 'hellozhang'
+
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v2
+              with:
+                  persist-credentials: false
+
+            - name: Setup .NET Core
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: 8.0.100
+
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '10.x'
+
+            - name: Publish Docs 🎉
+              run: |
+                  npm install
+                  echo "/* updated `date "+%Y-%m-%d %H:%M:%S"` */" >> ./wwwroot/service-worker.published.js
+                  cp -rf .github/deploy/gh-pages/* .github/deploy/gh-pages/.nojekyll .github/deploy/gh-pages/.spa .//wwwroot
+                  dotnet build ./ANTBlazor.sln
+                  dotnet publish ./ANTBlazor.csproj -c Release -o cargo
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@releases/v3
+              with:
+                  ACCESS_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
+                  BRANCH: gh-pages
+                  FOLDER: cargo/wwwroot

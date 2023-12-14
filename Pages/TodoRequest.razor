@@ -1,0 +1,30 @@
+﻿@page "/todorequest"
+@using System.Net.Http.Headers
+@using EasyNotice.Dingtalk
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
+
+<h1>ToDo Request</h1>
+
+<button @onclick="PostRequest">Submit POST request</button>
+
+<p>Response body returned by the server:</p>
+
+<p>@responseBody</p>
+
+@code {
+    private string? responseBody;
+
+    private async Task PostRequest()
+    {
+          
+        
+    }
+
+    public class TodoItem
+    {
+        public long Id { get; set; }
+        public string? Name { get; set; }
+        public bool IsComplete { get; set; }
+    }
+}
