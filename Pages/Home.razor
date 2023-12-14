@@ -4,21 +4,36 @@
 @using AntDesign
 @using EasyNotice.Dingtalk
 @using Flurl.Http
+@using Microsoft.Extensions.Caching.Memory
 @using MimeKit
 @using MailKit.Net.Smtp
 @inject IChartService chatService
 @inject HttpClient http
-@* <div class="card text-center m-3">
-    <h5 class="card-header">POST request with headers set</h5>
-    <div class="card-body">
-        Returned Id: @article?.Id
-    </div>
-</div> *@
+@inject IMemoryCache memoryCache
+<div style="background-color: #ececec; padding: 20px;">
+    <Row Gutter="16">
+        <Col Span="8">
+        <Card Style="width:450px;">
+            <CalendarItem DataCode="20161228000230030000000000011422"></CalendarItem>
+        </Card>
+        </Col>
+        @*  <Col Span="8"> <Card Style="width:450px;">
+        <CalendarItem DataCode="20161228000230030000000000011422"></CalendarItem>
+        </Card>
+        </Col>
+        <Col Span="8"> <Card Style="width:450px;">
+        <CalendarItem DataCode="20161228000230030000000000011422"></CalendarItem>
+        </Card>
+        </Col> *@
+    </Row>
+</div>
+@memoryCache.Get("A001")
 @code {
     protected override async Task OnInitializedAsync()
     {
 
-
+        memoryCache.Set("A001",DateTime.Now.ToUniversalTime,TimeSpan.FromSeconds(30));
+        
         var row = new
         {
             records = new[]
@@ -42,25 +57,6 @@
             .WithHeader("Accept", "application/json")
             .PostJsonAsync(row);
         var s = res.GetStringAsync();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

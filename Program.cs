@@ -8,7 +8,14 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://oapi.dingtalk.com/") });
 builder.Services.AddScoped<IChartService, ChartService>();
 
-
+builder.Services.AddMemoryCache(options =>  // 1、添加内存缓存中间件（一般用于粘性会话或单机缓存）
+{
+    options.SizeLimit = 100;                                    // 缓存的最大大小为100份
+    options.ExpirationScanFrequency = TimeSpan.FromSeconds(2);  // 两秒钟查找一次过期项
+    options.CompactionPercentage = 0.2;                         // 缓存满了时候压缩20%的优先级较低的数据
+    options.TrackStatistics = false;          // 设置是否跟踪内存缓存统计信息。 默认已禁用
+    options.TrackLinkedCacheEntries = false;  // 设置是否跟踪链接条目。 默认已禁用
+});
 
 //builder.Services.AddHttpClient("WebAPI",
 //        client => client.BaseAddress = new Uri("https://www.example.com/base"))
