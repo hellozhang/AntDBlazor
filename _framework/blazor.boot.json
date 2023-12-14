@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ANTBlazor",
   "resources": {
-    "hash": "sha256-lOSrNl1Uh9jdqdpeHXfA02VnUPaD88H9lDSLQGscGRA=",
+    "hash": "sha256-Kp+qc5GdRbbm/tOUIw8pd3JOKhkArQT0pZh/VYaJ9v4=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "ANTBlazor.wasm": "sha256-qhr6dzd79GLV+AlthYBYZA3eZ8langif+WgnC2yLYtY=",
+      "ANTBlazor.wasm": "sha256-ukYjuclK6pCw7jSLpGCBSFvBvN3HpyH2Vobx4svc9Dk=",
       "AntDesign.Charts.wasm": "sha256-YeCQmjKJcBv03MQdn/KGwgUG3LZZKoZ9HY8RKf2E8Ic=",
       "AntDesign.ProLayout.wasm": "sha256-BlejVAClsvHPL2DPZCxLjdvTp0HiIJSYmhL925ywRg8=",
       "AntDesign.wasm": "sha256-oaHhbNKk47JAztFpvOBhvnPGZob+hif/9S9aPUnOb9E=",
