@@ -56,6 +56,6 @@ builder.Services.AddMemoryCache(options =>  // 1、添加内存缓存中间件（一般用于粘
 ////  .PostJsonAsync(message2);
 
 
-
+builder.Services.AddAntDesign();
 
 await builder.Build().RunAsync();
