@@ -10,7 +10,7 @@ namespace ANTBlazor.Extensions
         public static AliFundExt instance = new AliFundExt();
         public async Task<AliAuth> GetAlIAuthAsync()
         {
-            IFlurlResponse deafultRes = await "http://www.fund123.cn/fund".GetAsync();
+            IFlurlResponse deafultRes = await "https://www.fund123.cn/fund".GetAsync();
             string cooike = string.Empty;
             foreach (var ite in deafultRes.Cookies)
             {
@@ -32,7 +32,7 @@ namespace ANTBlazor.Extensions
             //DateTime endDate = DateTime.Now.AddDays(1 - Convert.ToInt32(DateTime.Now.DayOfWeek.ToString("d"))).AddDays(4);  //本周周5
             DateTime weekStart = DateTime.Now;
             AliAuth authToken = await AliFundExt.instance.GetAlIAuthAsync();
-            var res = await "http://www.fund123.cn/api/fund/queryFundHistoryNetValueList"
+            var res = await "https://www.fund123.cn/api/fund/queryFundHistoryNetValueList"
             .WithHeader("Host", "www.fund123.cn")
             .WithHeader("Cookie", authToken.Cooike)
             .SetQueryParams(new { _csrf = authToken.Csrf })
